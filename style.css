@@ -1,0 +1,106 @@
+:root {
+    --font-size: 16px;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    line-height: 1.75;
+}
+
+body {
+    font-family: "citrine-variable", sans-serif;
+    font-variation-settings: "wght" 400;
+    font-size: var(--font-size);
+}
+
+h1 {
+    font-variation-settings: "wght" 800;
+    font-size: var(--font-size);
+}
+
+h2 {
+    font-variation-settings: "wght" 600;
+    font-size: var(--font-size);
+    color: rgb(219, 135, 0);
+}
+
+h3 {
+    font-variation-settings: "wght" 600;
+    font-size: var(--font-size);
+}
+
+a {
+    text-decoration: underline dotted;
+    font-variation-settings: "wght" 500;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+    color: black;
+    transition: font-variation-settings 0.3s ease;
+}
+
+a:hover {
+    font-variation-settings: "wght" 800;
+}
+
+strong {
+    font-variation-settings: "wght" 600;
+    color: rgb(155, 94, 255);
+}
+
+u {
+    text-decoration: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+    text-decoration-thickness: 1px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+abbr {
+    font-variation-settings: "wght" 400;
+    transition: font-variation-settings 0.3s ease;
+}
+
+abbr:hover {
+    font-variation-settings: "wght" 700;
+}
+
+.content {
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+  }
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about-text {
+    hyphens: auto;  
+    -webkit-hyphens: auto;
+}
+
+.page {
+    display: none;
+}
+
+.about-page, .work-page, .contact-page {
+    display: none;
+}
+
+.active {
+    display: block;
+}

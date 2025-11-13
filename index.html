@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>toyotapanzer</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pee8kql.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class='content'>
+      <div class='inline'>
+        <a class='home-link' data-target="about-page">toyotapanzer</a>
+        <a class='work-link' data-target="work-page">work</a>
+        <a class='contact-link' data-target="contact-page">contact</a>
+      </div>
+
+      <h2>multidisciplinary creative</h2>
+      <p>game development, design, programming, art</p>
+      
+      <hr>
+
+      <div class='page about-page active'>
+        <h3>about</h3>
+
+        <div class='about-text'>
+          I am a college student studying Graphic Design. I have been creating professionally since 2020, working with 
+          a variety of programs, for personal and commercial projects. I strive for amazing results, scalability, 
+          accessibility, and beauty in all the work I make. I am from Chicago, and I am in the <abbr title="Central Standard Time (EST-1)">CST</abbr>
+          timezone.
+        </div>
+
+        <br>
+
+        <h3>process</h3>
+
+        <div class='about-text'>
+          I tend to work in a circular process of research, drafting, rough composition, and finalization. I always research
+          and take inspiration from reputable sources along with my client, and I continually communicate throughout the process. 
+          I am able to develop many features and functionalities myself, but I am also experienced in a variety of frameworks 
+          and libraries should they be preferred. I often times strongly recommend that certain components should make use of
+          third-party, actively maintained libraries for security or performance reasons.
+        </div>
+      </div>
+
+      <div class='page work-page'>
+        <h2><strong>by category:</strong></h2>
+
+        <div class='inline'>
+          <a class='work-category' data-target="work-roblox">roblox</a>
+          <a class='work-category' data-target="work-design">design</a>
+          <a class='work-category' data-target="work-other">other</a>
+        </div>
+
+        <div class='about-text'>
+          
+        </div>
+      </div>
+
+      <div class='page contact-page'>
+        <h3>contact</h3>
+
+        <div class='about-text'>
+          <p>My preferred contact method for work is through a message request on Discord.</p>
+
+          <strong>timezone:</strong> <abbr title="Central Standard Time (EST-1)">CST</abbr> <br>
+          <strong>primary avaliability:</strong> fri-sun, 10am to 10pm <br>
+          <strong>discord:</strong> @hyc.h <br>
+        </div>  
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('a[data-target]').forEach(link => {
+        link.addEventListener('click', function() {
+          const target = this.getAttribute('data-target');
+          document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+          });
+          document.querySelector(`.${target}`).classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html> 
